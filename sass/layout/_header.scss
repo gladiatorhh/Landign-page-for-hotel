@@ -1,0 +1,26 @@
+.header{
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-gray-light-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7rem 3rem;
+
+    &__logo{
+        height: 3.25rem;
+    }
+}
+
+.user-nav{
+    display: flex;
+    align-items: center;
+    &__icon{
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    &__user-photo{
+        height: 3.75rem;
+        border-radius: 50%;
+    }
+}
