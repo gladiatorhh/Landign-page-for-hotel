@@ -143,3 +143,47 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  .navigation__list {
+    font-size: 1.4rem;
+    list-style-type: none;
+    margin-top: 3.5rem; }
+  .navigation__item {
+    position: relative; }
+    .navigation__item:not(:last-child) {
+      margin-bottom: .5rem; }
+    .navigation__item::before {
+      content: "";
+      position: absolute;
+      background-color: var(--color-primary);
+      top: 0;
+      left: 0;
+      height: 100%;
+      transform: scaleY(0);
+      width: 3px;
+      transition: transform 0.3s, width 0.4s 0.3s cubic-bezier(1, 0, 0, 1), background-color 0.1s; }
+    .navigation__item:hover::before, .navigation__item--active::before {
+      transform: scaleY(1);
+      width: 100%; }
+    .navigation__item:active::before {
+      background-color: var(--color-primary-light); }
+  .navigation__link:link, .navigation__link:visited {
+    color: var(--color-gray-light-1);
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    z-index: 10; }
+  .navigation__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; }
+  .navigation__legal {
+    color: var(--color-gray-light-4);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem; }
+
+.hotel-view {
+  height: 80rem; }

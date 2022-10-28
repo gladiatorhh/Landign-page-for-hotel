@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -51,7 +51,49 @@
         </header>
 
         <div class="content">
-            <nav class="navigation">nav</nav>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item navigation__item--active">
+                        <a class="navigation__link" href="#">
+                            <svg class="navigation__icon">
+                                <use xlink:href="img/sprite.svg#icon-home"></use>
+                            </svg>
+                            <span>Hotel</span>
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">
+                            <svg class="navigation__icon">
+                                <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                            </svg>
+                            <span>Flight</span>
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">
+                            <svg class="navigation__icon">
+                                <use xlink:href="img/sprite.svg#icon-key"></use>
+                            </svg>
+                            <span>Car rental</span>
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">
+                            <svg class="navigation__icon">
+                                <use xlink:href="img/sprite.svg#icon-map"></use>
+                            </svg>
+                            <span>Tours</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="navigation__legal">
+                    &copy; 2022 by trillo. All rights are reserved.
+                </div>
+            </nav>
 
             <main class="hotel-view">content</main>
         </div>
