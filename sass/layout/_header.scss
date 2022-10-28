@@ -1,26 +1,65 @@
-.header{
+.header {
     background-color: var(--color-white);
     border-bottom: 2px solid var(--color-gray-light-1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .7rem 3rem;
 
-    &__logo{
+    &__logo {
         height: 3.25rem;
     }
 }
 
-.user-nav{
+.user-nav {
     display: flex;
     align-items: center;
-    &__icon{
-        height: 2.25rem;
-        width: 2.25rem;
+    align-self: stretch;
+
+    &>* {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: var(--color-gray-light-2);
+        }
     }
 
-    &__user-photo{
-        height: 3.75rem;
+    &__icon-box {
+        position: relative;
+    }
+
+    &__icon {
+        height: 2.75rem;
+        width: 2.75rem;
+        fill: var(--color-gray-dark-3);
+    }
+
+    &__notification {
+        font-size: .8rem;
+        position: absolute;
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
         border-radius: 50%;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        top: .5rem;
+        right: 1.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__user-photo {
+        height: 3.75rem;
+        margin-right: .5rem;
+        border-radius: 50%;
+    }
+
+    &__username {
+        font-size: 1.3rem;
     }
 }

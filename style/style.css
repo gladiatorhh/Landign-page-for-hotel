@@ -54,7 +54,8 @@ body {
     margin-right: -3rem;
     transition: all .2s;
     outline: 2px solid var(--color-gray-light-3);
-    outline-offset: .2rem; }
+    outline-offset: .2rem;
+    margin-block: 1.5rem; }
     .search__input:focus {
       width: 100%;
       background-color: var(--color-gray-light-3); }
@@ -93,20 +94,48 @@ body {
   border-bottom: 2px solid var(--color-gray-light-1);
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: .7rem 3rem; }
+  align-items: center; }
   .header__logo {
     height: 3.25rem; }
 
 .user-nav {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  align-self: stretch; }
+  .user-nav > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+    .user-nav > *:hover {
+      background-color: var(--color-gray-light-2); }
+  .user-nav__icon-box {
+    position: relative; }
   .user-nav__icon {
-    height: 2.25rem;
-    width: 2.25rem; }
+    height: 2.75rem;
+    width: 2.75rem;
+    fill: var(--color-gray-dark-3); }
+  .user-nav__notification {
+    font-size: .8rem;
+    position: absolute;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    top: .5rem;
+    right: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .user-nav__user-photo {
     height: 3.75rem;
+    margin-right: .5rem;
     border-radius: 50%; }
+  .user-nav__username {
+    font-size: 1.3rem; }
 
 .navigation {
   background-color: var(--color-gray-dark-1);
