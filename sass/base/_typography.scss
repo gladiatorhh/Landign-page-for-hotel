@@ -9,3 +9,7 @@ body{
     line-height: 1.6;
     color: var(--color-gray-dark-2);
 }
+
+.paragraph:not(:last-of-type){
+    margin-bottom: 2rem;
+}
