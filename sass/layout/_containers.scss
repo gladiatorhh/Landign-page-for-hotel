@@ -1,12 +1,10 @@
-.container{
+.container {
     max-width: 120rem;
     margin: 8rem auto;
-    background-color: var(--color-gray-light-2);
+    background-color: var(--color-white);
     box-shadow: var(--shadow-dark);
-
-    min-height: 50rem;
 }
 
-.content{
+.content {
     display: flex;
 }

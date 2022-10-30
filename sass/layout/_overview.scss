@@ -1,0 +1,56 @@
+.overview {
+    display: flex;
+    align-items: center;
+    border-bottom: var(--border-line);
+
+    &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        padding: 1.5rem 3rem;
+    }
+
+    &__stars {
+        margin-right: auto;
+        display: flex;
+    }
+
+    &__icon-star,
+    &__icon-location {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: var(--color-primary);
+    }
+
+    &__location {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-location {
+        margin-right: .5rem;
+    }
+
+    &__rating {
+        background-color: var(--color-primary);
+        align-self: stretch;
+        color: var(--color-white);
+        margin-left: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-inline: 2.25rem;
+    }
+
+    &__rating-average {
+        font-size: 2.25rem;
+        font-weight: 300;
+    }
+
+    &__rating-count {
+        font-size: .8rem;
+        text-transform: uppercase;
+    }
+}
