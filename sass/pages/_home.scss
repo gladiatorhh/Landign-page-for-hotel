@@ -44,3 +44,15 @@
         }
     }
 }
+
+.cta {
+    padding-block: 3.5rem;
+    text-align: center;
+
+    &__heading {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+    }
+}
