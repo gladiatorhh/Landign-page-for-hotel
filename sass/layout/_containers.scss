@@ -3,8 +3,17 @@
     margin: 8rem auto;
     background-color: var(--color-white);
     box-shadow: var(--shadow-dark);
+
+    @include respondMax($bp-largest) {
+        margin: 0;
+        min-width: 100%;
+    }
 }
 
 .content {
     display: flex;
+
+    @include respondMax($bp-medium){
+        flex-direction: column;
+    }
 }

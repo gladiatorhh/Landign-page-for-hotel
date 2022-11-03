@@ -5,6 +5,12 @@
     align-items: center;
     font-size: 1.4rem;
 
+    @include respondMax($bp-smallest) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-gray-light-2);
+    }
+
     &__input {
         font-size: inherit;
         font-family: inherit;
@@ -20,9 +26,20 @@
         outline-offset: .2rem;
         margin-block: 1.5rem;
 
+
         &:focus {
             width: 100%;
             background-color: var(--color-gray-light-3);
+        }
+
+        @include respondMax($bp-smallest) {
+            outline: 0;
+            width: 90%;
+
+            &:focus {
+                width: 90%;
+                background-color: var(--color-gray-light-2);
+            }
         }
 
         &::placeholder {

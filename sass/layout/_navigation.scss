@@ -9,13 +9,24 @@
         font-size: 1.4rem;
         list-style-type: none;
         margin-top: 3.5rem;
+
+        @include respondMax($bp-medium) {
+            margin: 0;
+            display: flex;
+        }
     }
 
     &__item {
         position: relative;
 
+
         &:not(:last-child) {
             margin-bottom: .5rem;
+        }
+
+        @include respondMax($bp-medium) {
+            flex: 1;
+            margin: 0 !important;
         }
 
         &::before {
@@ -28,7 +39,7 @@
             transform: scaleY(0);
             width: 3px;
             transition: transform .3s, width .4s .3s cubic-bezier(1, 0, 0, 1),
-            background-color .1s;
+                background-color .1s;
         }
 
         &:hover::before,
@@ -48,9 +59,21 @@
         position: relative;
         text-decoration: none;
         text-transform: uppercase;
-        display: block;
         padding: 1.5rem 3rem;
         z-index: 10;
+        display: flex;
+        align-items: center;
+
+        @include respondMax($bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        @include respondMax($bp-small) {
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem;
+        }
     }
 
     &__icon {
@@ -58,6 +81,11 @@
         width: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
+
+        @include respondMax($bp-small) {
+            margin-right: 0;
+            margin-bottom: .5rem;
+        }
     }
 
     &__legal {
@@ -65,5 +93,9 @@
         font-size: 1.2rem;
         text-align: center;
         padding: 2.5rem;
+
+        @include respondMax($bp-medium) {
+            display: none;
+        }
     }
 }

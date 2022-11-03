@@ -9,6 +9,14 @@
         text-transform: uppercase;
         letter-spacing: .1rem;
         padding: 1.5rem 3rem;
+
+        @include respondMax($bp-small) {
+            font-size: 1.8rem;
+            padding: 1.25 2rem;
+        }
+        @include respondMax($bp-smallest) {
+            padding: 1rem 1.25rem;
+        }
     }
 
     &__stars {
@@ -42,15 +50,27 @@
         align-items: center;
         justify-content: center;
         padding-inline: 2.25rem;
+
+        @include respondMax($bp-small) {
+            padding: 0 1.5rem;
+        }
     }
 
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
+
+        @include respondMax($bp-small) {
+            font-size: 1.8rem;
+        }
     }
 
     &__rating-count {
         font-size: .8rem;
         text-transform: uppercase;
+
+        @include respondMax($bp-small) {
+            font-size: .5rem;
+        }
     }
 }

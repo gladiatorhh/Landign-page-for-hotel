@@ -1,8 +1,12 @@
-html{
+html {
     font-size: 62.5%; // what 1 rem is 
+
+    @include respondMax($bp-large) {
+        font-size: 50%;
+    }
 }
 
-body{
+body {
     min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -10,6 +14,6 @@ body{
     color: var(--color-gray-dark-2);
 }
 
-.paragraph:not(:last-of-type){
+.paragraph:not(:last-of-type) {
     margin-bottom: 2rem;
 }

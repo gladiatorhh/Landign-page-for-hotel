@@ -4,6 +4,16 @@
     background-color: var(--color-gray-light-1);
     border-bottom: var(--border-line);
     font-size: 1.4rem;
+
+    @include respondMax($bp-medium) {
+        padding: 3rem;
+    }
+
+    @include respondMax($bp-small){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .description {
@@ -12,6 +22,16 @@
     box-shadow: var(--shadow-light);
     flex: 0 0 60%;
     margin-right: 4.5rem;
+
+    @include respondMax($bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @include respondMax($bp-small){
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .user-reviews {
@@ -32,6 +52,13 @@
         margin-right: auto;
     }
 
+
+    &__friends {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
     &__photo {
         height: 4rem;
         width: 4rem;
@@ -40,7 +67,7 @@
         box-sizing: content-box;
 
         &:not(:last-child) {
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -48,6 +75,10 @@
 .cta {
     padding-block: 3.5rem;
     text-align: center;
+
+    @include respondMax($bp-medium) {
+        padding: 2.5rem 0;
+    }
 
     &__heading {
         font-size: 1.5rem;

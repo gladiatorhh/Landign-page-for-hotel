@@ -1,0 +1,14 @@
+// Medial queries are contained in mixin for writing less code
+
+@mixin respondMin($min-width) {
+    @media screen and (min-width: $min-width) {
+        @content;
+    }
+}
+
+
+@mixin respondMax($max-width) {
+    @media screen and (max-width: $max-width) {
+        @content;
+    }
+}

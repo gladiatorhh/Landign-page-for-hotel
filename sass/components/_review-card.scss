@@ -6,6 +6,11 @@
     position: relative;
     overflow: hidden;
 
+    @include respondMax($bp-medium){
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+
     &::before {
         content: "\201c";
         line-height: 1;

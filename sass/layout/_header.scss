@@ -5,6 +5,13 @@
     justify-content: space-between;
     align-items: center;
 
+    @include respondMax($bp-smallest) {
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 11rem;
+        padding-top: .5rem;
+    }
+
     &__logo {
         height: 3.25rem;
         margin-left: 3rem;
@@ -54,6 +61,10 @@
         align-items: center;
     }
 
+    &__user {
+        position: relative;
+    }
+
     &__user-photo {
         height: 3.75rem;
         margin-right: .5rem;
@@ -63,4 +74,37 @@
     &__username {
         font-size: 1.3rem;
     }
+
+    &__menu {
+        position: absolute;
+        top: 5rem;
+        left: -3rem;
+        background-color: var(--color-gray-light-3);
+        width: 12rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        padding-inline: 2rem;
+        font-size: 1.5rem;
+        border-radius: .5rem;
+        box-shadow: var(--shadow-dark);
+        clip-path: polygon(0 10%, 60% 10%, 70% 0, 80% 10%, 100% 10%,100% 100%,0 100%);
+        z-index: 100;
+        list-style-type: none;
+    }
+
+    &__menu-item:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &__link:link,
+    &__link:visited{
+        text-decoration: none;
+        color: var(--color-gray-dark-4);
+        transition: color .2s;
+
+        &:hover{
+            color: var(--color-primary);
+        }
+    }
+
 }
